@@ -29,4 +29,132 @@ The bottom part you can add some custom HTML for the header and the footer and s
 
 # Customer settings
 
+Select registration method
+- Standard => register and become registered
+- Email Validation => need to validate mail before becoming registered
+- Admin approval => need to await admin approval to become registered
+- Disabled => Can't register at all
+
+Get notified when a new customer has registered
+
+Require registration or not for buying downloadable products
+
+Allow customers to check gift card balance, if toggled requires CAPTCHA to prevent brute force
+
+Allow customers to select time zone
+
+Default time zone settings
+
+Allow customers to remove associations
+- external authentication => logging into the webshop using third party account like google account login or github or w/e, also called social login or external login
+- removing associations will remove the google login etc
+
+Password settings
+- minimum and maximum length
+- require lowercase, uppercase, alphanumeric, digit, unduplicated password numbers
+- password format (hashed, encrypted or clear)
+- password lifetime in days, how long recovery link is valid, maximum login failures, lockout time if failed login, option to force entering email twice, option to force multi-factor auth
+
+Account
+- enable username (instead of email)
+- customer name format (first name, full name, username or email)
+- validate phone number
+- allow customer to upload avatars
+- hide/show 'Downloadable products' tab
+- hide/show 'back in stock subscriptions' tab
+- hide/show newsletter box
+- allow to unsubscribe from newsletter
+- store last visited page
+- store ip addresses (could be regulated due gdpr stuff in EU or CCPA in california and such)
+
+Profile
+- allow viewing of customer profiles (so customers can watch other customers profiles)
+- show customers location and/or join date
+
+Customer form fields (during registration of new user)
+- gender enabled (male, female)
+- neutral option enabled (neutral gender)
+- first name, last name, company (enabled or not and also required or not)
+- DOB, street address, street address 2, zip, city, region, country, phone number, fax number, accept privacy policy, newsletter (enabled or not)
+- should newsletter be ticked by default
+- can manage additional attributes from a table
+
+Address form fields (during checkout)
+- company, streed address, street address 2, zip, city, phone number, fax number (enabled/required)
+- region, country, state/province (enabled)
+- default country
+- can also manage additional attributes
+
+# Order settings
+
+Checkout
+- disable checkout (temporary closed store checkout)
+- toggle anonymous checkout (can buy without account)
+- use one page checkout
+- order totals on payment info tab (for one page checkout)
+- terms of service on shopping cart page to accept or decline
+- terms of service on confirm order page
+- disable 'billing address' step
+- disable 'order completed' page
+- display 'pickup in store' on 'shipping method' page
+
+Order totals
+- minimum sub-total amount in usd
+- calculate 'min order sub-total amount' including tax
+- min order total amounts (quantity)
+- auto update order totals (beta testing, its for adjusting an order in admin area)
+
+Common
+- Order ID (starting point)
+- order number mask (like basing it on the order date or user ID or w/e)
+- is re-order allowed (button to purchase the same order as last time)
+- complete order when delivered (changes status from shipped to delivered, otherwise once shipped its enough)
+- Export orders with products (ex 1001, John Doe, 2025-05-23, Red T-Shirt, TS-RED, 2, 25.00 vs 1001, John Doe, 2025-05-23, 100.00, Complete)
+- Allow admins to buy "Call for price" products (if store admins can add products without listed price to the cart of people and set a price for it)
+- show product thumbnail in order details page
+
+Pdf invoice
+- attach pdf invoice 'order placed', 'order paid', 'order processing' and/or 'order completed' emails
+
+Gift cards (fraud prevention kinda)
+- Activate gift cards after completing of an order
+- Deactivate gift cards after cancelling of an order
+- Deactivate gift cards after deleting of an order
+- Delete gift card usage history after order cancellation
+
+Return request settings
+- Enable return system (can return items previously purchased)
+- request number mask (can set ID to like date of request etc)
+- number of days return request is avail
+- allow file uploads
+- select request reasons avail (wrong product, problem with product etc)
+- select return request actions (repair, replace, store credit, refund)
+
+# Shipping settings
+
+Common
+- estimate shipping enabled on cart page and/or product page
+- use city name or zip code for estimate shipping
+- 'pick up in store' enabled/disabled
+- toggle to ignore additional shipping charge for puis
+- display pickup points on the map
+- free shipping over X (can set X and include/exclude tax in X)
+- Use warehouse location (if several locations to calculate shipping rates)
+- consider associated products dimensions and weight (or if only base on main item)
+- sort shipping methods by position or shipping cost (position is manually entered when entering the different shipping options like free shipping as 1, standard as 2, express 3 etc)
+
+Notifications
+- Notify customer about shipping from multiple locations 
+- display shipment events (to customers)
+- display shipment events (to store owner (in admin area))
+
+Checkout
+- Hide shipping total if shipping is not required
+- ship to same address? 
+- bypass shipping method page if theres only one
+
+Shipping origin
+- first name, last name, email, company, country, state, region, city, address 1/2, zip, phone number, fax number
+
+# TBA settings
 TBA
